@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Copy URL and Run Shortcut</title>
+</head>
+<body>
+  <button id="copyUrlButton">复制 URL 并运行快捷指令</button>
+
+  <script>
+    document.getElementById('copyUrlButton').addEventListener('click', () => {
+      chrome.runtime.sendMessage({ action: 'run' });
+    });
+  </script>
+</body>
+</html>
